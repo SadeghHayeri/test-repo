@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Vazir';
+    src: url('./fonts/vazir/Vazir.eot'); /* IE9 Compat Modes */
+    url('./fonts/vazir/Vazir.woff2') format('woff2'), /* Super Modern Browsers */
+    url('./fonts/vazir/Vazir.woff') format('woff'), /* Pretty Modern Browsers */
+    url('./fonts/vazir/Vazir.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'Vazir-Black';
+    src: url('./fonts/vazir/Vazir-Black.eot'); /* IE9 Compat Modes */
+    url('./fonts/vazir/Vazir-Black.woff2') format('woff2'), /* Super Modern Browsers */
+    url('./fonts/vazir/Vazir-Black.woff') format('woff'), /* Pretty Modern Browsers */
+    url('./fonts/vazir/Vazir-Black.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'Vazir-Bold';
+    src: url('./fonts/vazir/Vazir-Bold.eot'); /* IE9 Compat Modes */
+    url('./fonts/vazir/Vazir-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+    url('./fonts/vazir/Vazir-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+    url('./fonts/vazir/Vazir-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'Vazir-Light';
+    src: url('./fonts/vazir/Vazir-Light.eot'); /* IE9 Compat Modes */
+    url('./fonts/vazir/Vazir-Light.woff2') format('woff2'), /* Super Modern Browsers */
+    url('./fonts/vazir/Vazir-Light.woff') format('woff'), /* Pretty Modern Browsers */
+    url('./fonts/vazir/Vazir-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'Vazir-Medium';
+    src: url('./fonts/vazir/Vazir-Medium.eot'); /* IE9 Compat Modes */
+    url('./fonts/vazir/Vazir-Medium.woff2') format('woff2'), /* Super Modern Browsers */
+    url('./fonts/vazir/Vazir-Medium.woff') format('woff'), /* Pretty Modern Browsers */
+    url('./fonts/vazir/Vazir-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'Vazir-Thin';
+    src: url('./fonts/vazir/Vazir-Thin.eot'); /* IE9 Compat Modes */
+    url('./fonts/vazir/Vazir-Thin.woff2') format('woff2'), /* Super Modern Browsers */
+    url('./fonts/vazir/Vazir-Thin.woff') format('woff'), /* Pretty Modern Browsers */
+    url('./fonts/vazir/Vazir-Thin.ttf')  format('truetype'), /* Safari, Android, iOS */
+}

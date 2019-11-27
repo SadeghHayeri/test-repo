@@ -1,0 +1,123 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.answers {
+    display: flex;
+    flex-direction: row;
+    width: 650px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+
+.line {
+    background-color: #ddd;
+    width: 900px;
+    height: 1px;
+    margin-bottom: 50px;
+}
+
+.answers-text {
+    font-family: Vazir-Black;
+}
+
+.good-text {
+    color: rgb(86, 172, 138);
+}
+
+.bad-text {
+    color: rgb(95, 57, 77);
+}
+
+.circle {
+    border-radius: 1000px;
+    cursor: pointer;
+    transition: all 300ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bad {
+    border: 3px solid rgb(95, 57, 77);
+}
+
+.bad:hover {
+    background-color: rgb(95, 57, 77);
+    box-shadow: 0px 0px 0px 5px rgba(95, 57, 77, 0.15);
+}
+
+.bad.selected {
+    background-color: rgb(95, 57, 77);
+}
+
+.normal {
+    border: 3px solid rgb(155, 159, 170);
+}
+
+.normal.selected {
+    background-color: rgb(155, 159, 170);
+}
+
+.normal:hover {
+    background-color: rgb(155, 159, 170);
+    box-shadow: 0px 0px 0px 5px rgba(155, 159, 170, 0.15);
+}
+
+.good {
+    border: 3px solid rgb(86, 172, 138);
+}
+
+.good:hover {
+    background-color: rgb(86, 172, 138);
+    box-shadow: 0px 0px 0px 5px rgba(86, 172, 138, 0.15);
+}
+
+.good.selected {
+    background-color: rgb(86, 172, 138);
+}
+
+.r1 {
+    width: 20px;
+    height: 20px;
+}
+
+.r2 {
+    width: 30px;
+    height: 30px;
+}
+
+.r3 {
+    width: 40px;
+    height: 40px;
+}
+
+.r4 {
+    width: 50px;
+    height: 50px;
+}
+
+.t1 {
+    width: 12px;
+    height: 12px;
+}
+
+.t2 {
+    width: 16px;
+    height: 16px;
+}
+
+.t3 {
+    width: 21px;
+    height: 21px;
+}
+
+.t4 {
+    width: 25px;
+    height: 25px;
+}

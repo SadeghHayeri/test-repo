@@ -4,11 +4,11 @@ import Questions from './questions'
 
 function App() {
   return (
-      <body dir="rtl">
+      <div dir="rtl">
         <div className="App">
           <Questions/>
         </div>
-      </body>
+      </div>
   );
 }
 
