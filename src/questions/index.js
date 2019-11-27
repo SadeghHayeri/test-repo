@@ -5,7 +5,7 @@ import './style.css'
 import ProgressBar from "./progress-bar";
 
 
-const EVERY_PAGE_QUESTIONS = 6;
+const EVERY_PAGE_QUESTIONS = 4;
 
 class Questions extends React.Component {
     constructor(props) {
@@ -101,7 +101,7 @@ class Questions extends React.Component {
         const startOfPage = this.state.page * EVERY_PAGE_QUESTIONS;
         const endOfPage = Math.min(startOfPage + EVERY_PAGE_QUESTIONS, this.state.questions.length);
         const isFirstPage = this.state.page === 0;
-        const isLastPage = this.state.page === Math.floor(this.state.questions.length / EVERY_PAGE_QUESTIONS);
+        const isLastPage = this.state.page === Math.ceil(this.state.questions.length / EVERY_PAGE_QUESTIONS) - 1;
 
         const thisPageQuestions = this.state.questions.slice(startOfPage, endOfPage);
         const questions = thisPageQuestions.map((question, i) => (
