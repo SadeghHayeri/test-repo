@@ -3,3 +3,35 @@
     flex-direction: column;
     align-items: center;
 }
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    font-family: Vazir, serif;
+    width: 200px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.next {
+    background-color: rgb(72, 149, 151);
+}
+
+.previous {
+    background-color: rgb(95, 57, 77);
+}
+
+.end {
+    background-color: rgb(17, 151, 118);
+}

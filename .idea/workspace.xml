@@ -2,46 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5702fe6-c1dc-4edd-9fe7-8fbbf4c3352c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/fonts.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vazir/Vazir-Black.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vazir/Vazir-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vazir/Vazir-Black.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vazir/Vazir-Black.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vazir/Vazir-Bold.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vazir/Vazir-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vazir/Vazir-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vazir/Vazir-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vazir/Vazir-Light.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vazir/Vazir-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vazir/Vazir-Light.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vazir/Vazir-Light.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vazir/Vazir-Medium.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vazir/Vazir-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vazir/Vazir-Medium.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vazir/Vazir-Medium.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vazir/Vazir-Thin.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vazir/Vazir-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vazir/Vazir-Thin.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vazir/Vazir-Thin.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vazir/Vazir.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vazir/Vazir.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vazir/Vazir.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vazir/Vazir.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commons/persian-view/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/questions/answer/images/tick.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/questions/answer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/questions/answer/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/questions/progress-bar/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/questions/progress-bar/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/questions/answer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/answer/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/questions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/questions/question/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/question/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/questions/question/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/question/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/questions/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -76,6 +41,9 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.vagrant" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/commons/persian-view" />
       <recent name="$PROJECT_DIR$/src/questions/progress-bar" />
@@ -121,7 +89,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574777787942</updated>
-      <workItem from="1574777789839" duration="13385000" />
+      <workItem from="1574777789839" duration="15811000" />
     </task>
     <servers />
   </component>

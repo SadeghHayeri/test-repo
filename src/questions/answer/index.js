@@ -6,7 +6,7 @@ class Answer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            selected: null
+            selected: this.props.defaultAnswer,
         }
     }
 
