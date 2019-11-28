@@ -1,0 +1,77 @@
+.slider {
+    width: 100%;
+    height: 550px;
+    background-color: rgb(81, 142, 247);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: right;
+    margin-bottom: 150px;
+}
+
+.shape {
+    background-color: white;
+    position: absolute;
+    margin-top: 350px;
+    height: 200px;
+    width: 100%;
+}
+
+.under-slider {
+    fill: rgb(81, 142, 247);
+}
+
+.title {
+    font-family: Vazir-Bold;
+    color: white;
+    font-size: 60px;
+    margin-top: 100px;
+}
+
+.boxes {
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+}
+
+.slider-box {
+    width: 400px;
+    height: 280px;
+    margin: 20px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.box-one {
+    background-color: rgba(240, 238, 207, .95);
+    border-bottom: 20px solid #eece0d;
+}
+
+.box-two {
+    background-color: rgba(188, 238, 232, .95);
+    border-bottom: 20px solid #51a9ab;
+}
+
+.box-three {
+    background-color: rgba(238, 222, 238, .95);
+    border-bottom: 20px solid #814e69;
+}
+
+.box-image {
+    width: 80px;
+    margin-top: 50px;
+}
+
+.box-title {
+    font-family: Vazir-Bold;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.box-under-title {
+    font-family: Vazir;
+    color: #575757;
+    padding: 0px 50px;
+    margin-top: 10px;
+    font-size: 15px;
+}

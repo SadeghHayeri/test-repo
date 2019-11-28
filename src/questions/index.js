@@ -5,12 +5,11 @@ import './style.css'
 import ProgressBar from "./progress-bar";
 
 
-const EVERY_PAGE_QUESTIONS = 4;
+const EVERY_PAGE_QUESTIONS = 6;
 
 class Questions extends React.Component {
     constructor(props) {
         super(props);
-        this.progressRef = React.createRef()
         this.answers = {};
         this.state = {
             percentage: 0,
@@ -86,7 +85,7 @@ class Questions extends React.Component {
 
     nextPage() {
         this.setState({page: this.state.page + 1});
-        window.scrollTo(0, this.progressRef.current.offsetTop)
+        window.scroll({top: 670, left: 0, behavior: 'smooth' })
     }
 
     previousPage() {
@@ -116,7 +115,7 @@ class Questions extends React.Component {
 
         return(
             <div>
-                <ProgressBar percentage={this.state.percentage} ref={this.progressRef}/>
+                <ProgressBar percentage={this.state.percentage}/>
                 {questions}
                 <div className='buttons'>
                     {!isLastPage && <div className="button next" onClick={() => this.nextPage()}>بعدی</div>}

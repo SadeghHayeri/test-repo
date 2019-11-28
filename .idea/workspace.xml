@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5702fe6-c1dc-4edd-9fe7-8fbbf4c3352c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/header/images/autism.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/header/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/header/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/header/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/slider/images/brain.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/slider/images/find.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/slider/images/help.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/slider/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/slider/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/questions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/questions/progress-bar/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/progress-bar/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/commons/persian-view" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/slider/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -38,14 +49,15 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/slider/images" />
+      <recent name="$PROJECT_DIR$/src/header/images" />
+      <recent name="$PROJECT_DIR$/src/slider" />
+      <recent name="$PROJECT_DIR$/src/header" />
       <recent name="$PROJECT_DIR$/src/commons/persian-view" />
-      <recent name="$PROJECT_DIR$/src/questions/progress-bar" />
-      <recent name="$PROJECT_DIR$/src/questions/answer/images" />
-      <recent name="$PROJECT_DIR$/src/questions/answer" />
-      <recent name="$PROJECT_DIR$/public/fonts/vazir" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -85,7 +97,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574777787942</updated>
-      <workItem from="1574777789839" duration="16531000" />
+      <workItem from="1574777789839" duration="23824000" />
     </task>
     <servers />
   </component>
