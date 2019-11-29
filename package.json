@@ -2,6 +2,7 @@
   "name": "autisme",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sadeghhayeri.github.io/autisme",
   "dependencies": {
     "persianjs": "^0.4.0",
     "react": "^16.12.0",
