@@ -1,17 +1,13 @@
 import React from 'react';
 import './App.css';
-import Questions from './questions'
-import Header from "./header";
-import Slider from "./slider";
+import MainPage from "./components/main-page";
+import Chat from "./components/chat";
 
 function App() {
   return (
       <div dir="rtl">
-        <div className="App">
-            <Header/>
-            <Slider/>
-            <Questions/>
-        </div>
+            {/*<MainPage/>*/}
+            <Chat/>
       </div>
   );
 }

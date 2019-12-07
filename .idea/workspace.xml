@@ -2,9 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5702fe6-c1dc-4edd-9fe7-8fbbf4c3352c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/chat/message/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/chat/message/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/main-page/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/main-page/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/slider/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/slider/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/header/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/slider/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/slider/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commons/persian-view/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/commons/persian-view/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/header/images/autism.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/images/autism.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/header/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/header/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/questions/answer/images/tick.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/questions/answer/images/tick.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/questions/answer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/questions/answer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/questions/answer/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/questions/answer/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/questions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/questions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/questions/progress-bar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/questions/progress-bar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/questions/progress-bar/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/questions/progress-bar/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/questions/question/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/questions/question/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/questions/question/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/questions/question/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/questions/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/questions/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/slider/images/brain.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slider/images/brain.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/slider/images/find.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slider/images/find.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/slider/images/help.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slider/images/help.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/slider/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chat/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/slider/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chat/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,20 +41,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/header/index.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/chat/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="11" column="64" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+            <state relative-caret-position="304">
+              <caret line="97" column="44" selection-start-line="97" selection-start-column="44" selection-end-line="97" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/slider/index.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/chat/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="28" column="65" selection-start-line="28" selection-start-column="65" selection-end-line="28" selection-end-column="65" />
+            <state relative-caret-position="689">
+              <caret line="62" selection-start-line="62" selection-end-line="62" />
             </state>
           </provider>
         </entry>
@@ -55,6 +85,14 @@
       <list>
         <option value="$PROJECT_DIR$/src/header/index.js" />
         <option value="$PROJECT_DIR$/src/slider/index.js" />
+        <option value="$PROJECT_DIR$/src/components/main-page/index.js" />
+        <option value="$PROJECT_DIR$/src/App.css" />
+        <option value="$PROJECT_DIR$/src/components/main-page/style.css" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/components/chat/message/index.js" />
+        <option value="$PROJECT_DIR$/src/components/chat/message/style.css" />
+        <option value="$PROJECT_DIR$/src/components/chat/style.css" />
+        <option value="$PROJECT_DIR$/src/components/chat/index.js" />
       </list>
     </option>
   </component>
@@ -65,7 +103,9 @@
     <option name="height" value="1072" />
   </component>
   <component name="ProjectId" id="1U9ngBQ9a0gKHM6DzHMTWwE3hYk" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -84,6 +124,27 @@
               <item name="autisme" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="autisme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="autisme" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="autisme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="autisme" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="chat" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="autisme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="autisme" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="chat" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -93,7 +154,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/chat/message" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -103,16 +164,17 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.vagrant" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/public" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/chat/message" />
+      <recent name="$PROJECT_DIR$/src/components/main-page" />
+      <recent name="$PROJECT_DIR$/src/components/chat" />
       <recent name="$PROJECT_DIR$/src/slider/images" />
       <recent name="$PROJECT_DIR$/src/header/images" />
-      <recent name="$PROJECT_DIR$/src/slider" />
-      <recent name="$PROJECT_DIR$/src/header" />
-      <recent name="$PROJECT_DIR$/src/commons/persian-view" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -153,27 +215,27 @@
       <option name="presentableId" value="Default" />
       <updated>1574777787942</updated>
       <workItem from="1574777789839" duration="23824000" />
-      <workItem from="1575744736858" duration="121000" />
+      <workItem from="1575744736858" duration="7194000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121000" />
+    <option name="totallyTimeSpent" value="7194000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="984" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24986821" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24986821" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32982457" />
+      <window_info anchor="bottom" id="Version Control" weight="0.32982457" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32982457" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32982457" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32982457" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -219,17 +281,85 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/header/index.js">
+    <entry file="file://$PROJECT_DIR$/src/components/header/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="11" column="64" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/slider/index.js">
+    <entry file="file://$PROJECT_DIR$/src/components/main-page/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="28" column="65" selection-start-line="28" selection-start-column="65" selection-end-line="28" selection-end-column="65" />
+        <state relative-caret-position="399">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/slider/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/main-page/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/questions/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <marker date="1575745239650" expanded="true" signature="199:209" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/chat/message/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/chat/message/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="96" selection-start-line="11" selection-start-column="96" selection-end-line="11" selection-end-column="96" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/chat/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="689">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/chat/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="97" column="44" selection-start-line="97" selection-start-column="44" selection-end-line="97" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
