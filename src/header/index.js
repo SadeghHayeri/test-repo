@@ -9,7 +9,7 @@ class Header extends React.Component {
                 <div className="inner-header">
                     <div className="logo-container">
                         <img className="logo" src={logo}/>
-                        <div className='name'>غربالگری اولیه‌ی اوتیسم</div>
+                        <div className='name'>غربالگری اولیه‌ی اتیسم</div>
                     </div>
 
                     <div className="login">ورود</div>

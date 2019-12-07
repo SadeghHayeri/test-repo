@@ -12,7 +12,7 @@ class Slider extends React.Component {
                     <svg viewBox="0 0 500 105" preserveAspectRatio="none" className="shape">
                         <polygon points="600 61.82 476.72 105 351 74.68 157 105 0 55.39 0 -87 600 -87 600 61.82" className="under-slider"/>
                     </svg>
-                    <div className="title">غربالگری اولیه‌ی اوتیسم</div>
+                    <div className="title">غربالگری اولیه‌ی اتیسم</div>
                     <div className="boxes">
                         <div className="slider-box box-one">
                             <img className='box-image' src={brainImage}/>
@@ -26,7 +26,7 @@ class Slider extends React.Component {
                         </div>
                         <div className="slider-box box-three">
                             <img className='box-image' src={findImage}/>
-                            <div className='box-title'>غربالگری اوتیسم</div>
+                            <div className='box-title'>غربالگری اتیسم</div>
                             <div className='box-under-title'> مورد غربالگری آنلاین حرف بزن و آنلاین حرف بزن و این چیزا رو تفت بده</div>
                         </div>
                     </div>
