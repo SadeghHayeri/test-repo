@@ -6,8 +6,8 @@ import Chat from "./components/chat";
 function App() {
   return (
       <div dir="rtl">
-            <MainPage/>
-            {/*<Chat/>*/}
+            {/*<MainPage/>*/}
+            <Chat/>
       </div>
   );
 }

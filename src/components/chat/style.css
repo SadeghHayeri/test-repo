@@ -1,11 +1,9 @@
 .chat-box {
     margin: 0px auto;
-    width: 1000px;
-    border-right: 1px solid #c0c0c0;
-    border-left: 1px solid #c0c0c0;
-
-    /*background-color: #dddddd;*/
-    /*height: 1000px;*/
+    width: 900px;
+    /*border-right: 1px solid #c0c0c0;*/
+    /*border-left: 1px solid #c0c0c0;*/
+    padding: 30px;
 }
 
 .input {
@@ -58,6 +56,7 @@ input {
 }
 
 .message-box {
-    width: 1000px;
-    /*height: 100%;*/
+    width: 900px;
+    float: right;
+    margin-bottom: 100px;
 }

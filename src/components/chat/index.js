@@ -2,6 +2,7 @@ import React from 'react'
 import './style.css'
 import * as Scroll from 'react-scroll';
 import Message from "./message";
+import Users from "./users";
 
 let scroll = Scroll.animateScroll;
 
@@ -103,6 +104,10 @@ class Chat extends React.Component {
         this.setState({input: event.target.value});
     }
 
+    onUserChange(userId) {
+
+    }
+
     render() {
         const messages = this.state.messages.map(message => (
             <Message key={message.id} text={message.text} sender={message.sender} time={message.time}/>
@@ -113,6 +118,7 @@ class Chat extends React.Component {
                 <div className={"message-box"}>
                     {messages}
                 </div>
+                <Users onChange={(id) => {this.onUserChange(id)}}/>
                 <div className={"input"}>
                     <div onClick={() => {this.sendMessage()}} className={"send-button"}>ارسال</div>
                     <input type={"text"} placeholder={'متن پیام را بنویسید...'} value={this.state.input} onChange={this.handleChange}/>
