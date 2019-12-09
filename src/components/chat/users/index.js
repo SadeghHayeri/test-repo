@@ -6,27 +6,21 @@ class Users extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            selected: 1,
-            users: [{
-                id: 1,
-                name: 'sadegh',
-            }, {
-                id: 2,
-                name: 'سحر'
-            }],
+            selected: 'admin',
         }
     }
 
-    onClick(id) {
-        this.setState({selected: id});
+    onClick(user) {
+        this.setState({selected: user.name});
         if(this.props.onChange)
-            this.props.onChange(id);
+            this.props.onChange(user);
     }
 
     render() {
-        const users = this.state.users.map(user => (
-            <div onClick={() => this.onClick(user.id)} key={user.id} className={"user " + (this.state.selected === user.id ? "selected" : "")}>
+        const users = this.props.users.map(user => (
+            <div onClick={() => this.onClick(user)} key={user.id} className={"user " + (this.state.selected === user.id ? "selected" : "")}>
                 <div className={"user-name"}>{user.name}</div>
+                <div className={"status " + (user.isOnline ? "online" : "offline")}>{user.isOnline ? "آنلاین" : "آفلاین"}</div>
             </div>
         ));
 

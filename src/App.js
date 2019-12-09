@@ -2,14 +2,21 @@ import React from 'react';
 import './App.css';
 import MainPage from "./components/main-page";
 import Chat from "./components/chat";
+import Header from "./components/header";
 
 function App() {
-  return (
-      <div dir="rtl">
+
+    const jwt = {
+        username: Math.random() > .5 ? 'admin' : 'sadegh'
+    };
+
+    return (
+        <div dir="rtl">
+            <Header/>
             {/*<MainPage/>*/}
-            <Chat/>
-      </div>
-  );
+            <Chat jwt={jwt}/>
+        </div>
+    );
 }
 
 export default App;

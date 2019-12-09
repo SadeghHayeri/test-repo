@@ -60,3 +60,16 @@ input {
     float: right;
     margin-bottom: 100px;
 }
+
+.typing {
+    float: left;
+    font-family: Vazir-Light;
+    font-size: 15px;
+    clear: both;
+    color: #666666;
+    background-color: #f5f5f5;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 100px;
+}
+
