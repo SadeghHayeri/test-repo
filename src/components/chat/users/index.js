@@ -19,7 +19,7 @@ class Users extends React.Component {
     render() {
         const users = this.props.users.map(user => (
             <div onClick={() => this.onClick(user)} key={user.id} className={"user " + (this.state.selected === user.id ? "selected" : "")}>
-                <div className={"user-name"}>{user.name}</div>
+                <div className={"user-name"}>{user.name === 'admin' ? 'ادمین' : user.name}</div>
                 <div className={"status " + (user.isOnline ? "online" : "offline")}>{user.isOnline ? "آنلاین" : "آفلاین"}</div>
             </div>
         ));

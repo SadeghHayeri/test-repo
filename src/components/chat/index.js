@@ -4,6 +4,7 @@ import * as Scroll from 'react-scroll';
 import Message from "./message";
 import Users from "./users";
 import io from 'socket.io-client';
+import Header from "../header";
 
 let scroll = Scroll.animateScroll;
 
@@ -77,6 +78,10 @@ class Chat extends React.Component {
         this.io.on('setUsers', ({users}) => {
             this.setState({users});
         });
+
+        if(this.props.jwt.username !== 'admin') {
+            this.onUserChange({name: 'admin'});
+        }
     }
 
     changeStatus(username, status) {
@@ -132,15 +137,18 @@ class Chat extends React.Component {
         ));
 
         return(
-            <div className={"chat-box"}>
-                <div className={"message-box"}>
-                    {messages}
-                    {this.state.typing && <div className={"typing"}>...is typing</div>}
-                </div>
-                <Users users={this.state.users} onChange={(user) => {this.onUserChange(user)}}/>
-                <div className={"input"}>
-                    <div onClick={() => {this.sendMessage()}} className={"send-button"}>ارسال</div>
-                    <input type={"text"} placeholder={'متن پیام را بنویسید...'} value={this.state.input} onChange={this.handleChange}/>
+            <div>
+                <Header/>
+                <div className={"chat-box"}>
+                    <div className={"message-box"}>
+                        {messages}
+                        {this.state.typing && <div className={"typing"}>...is typing</div>}
+                    </div>
+                    <Users users={this.state.users} onChange={(user) => {this.onUserChange(user)}}/>
+                    <div className={"input"}>
+                        <div onClick={() => {this.sendMessage()}} className={"send-button"}>ارسال</div>
+                        <input type={"text"} placeholder={'متن پیام را بنویسید...'} value={this.state.input} onChange={this.handleChange}/>
+                    </div>
                 </div>
             </div>
         );

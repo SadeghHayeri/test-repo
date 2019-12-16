@@ -4,6 +4,14 @@ import MainPage from "./components/main-page";
 import Chat from "./components/chat";
 import Header from "./components/header";
 
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
+import MobileQuestsion from "./components/mobile-questions";
+
 function App() {
 
     const jwt = {
@@ -11,11 +19,17 @@ function App() {
     };
 
     return (
-        <div dir="rtl">
-            <Header/>
-            {/*<MainPage/>*/}
-            <Chat jwt={jwt}/>
-        </div>
+        <Router>
+            <Switch>
+                <Route path="/chat">
+                    <Chat jwt={jwt}/>
+                </Route>
+                <Route path="/">
+                    {/*<MainPage/>*/}
+                    <MobileQuestsion/>
+                </Route>
+            </Switch>
+        </Router>
     );
 }
 
