@@ -2,85 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5702fe6-c1dc-4edd-9fe7-8fbbf4c3352c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/mobile-questions/images/sound.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/selections.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q1.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q10.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q11.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q12.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q13.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q14.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q15.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q16.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q17.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q18.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q19.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q2.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q20.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q21.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q22.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q23.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q24.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q25.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q26.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q27.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q28.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q29.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q3.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q30.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q31.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q32.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q33.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q34.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q35.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q36.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q37.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q38.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q39.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q4.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q40.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q41.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q42.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q43.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q44.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q45.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q46.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q47.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q48.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q49.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q5.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q50.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q51.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q52.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q53.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q54.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q55.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q56.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q57.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q58.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q59.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q6.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q60.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q61.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q62.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q63.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q64.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q65.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q66.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q67.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q68.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q69.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q7.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q8.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/sounds/persian/q9.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/questionManager/text.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mobile-questions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mobile-questions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mobile-questions/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mobile-questions/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,13 +13,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/mobile-questions/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="135" column="20" selection-start-line="135" selection-start-column="20" selection-end-line="135" selection-end-column="20" />
+            <state relative-caret-position="-1581">
+              <caret line="131" column="5" lean-forward="true" selection-start-line="131" selection-start-column="5" selection-end-line="131" selection-end-column="5" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="33" column="24" lean-forward="true" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,7 +40,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/mobile-questions/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
+            <state relative-caret-position="4446">
               <caret line="234" column="17" selection-start-line="234" selection-start-column="17" selection-end-line="234" selection-end-column="17" />
             </state>
           </provider>
@@ -184,13 +119,13 @@
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/components/mobile-signup/style.css" />
         <option value="$PROJECT_DIR$/src/components/mobile-signup/index.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/mobile-questions/style.css" />
         <option value="$PROJECT_DIR$/src/components/mobile-questions/index.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="-2" />
     <option name="width" value="1920" />
     <option name="height" value="1082" />
@@ -204,6 +139,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -233,7 +169,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -313,12 +248,13 @@
       <workItem from="1577345808172" duration="24000" />
       <workItem from="1577345852249" duration="43000" />
       <workItem from="1578477286323" duration="13008000" />
-      <workItem from="1578595732986" duration="7787000" />
+      <workItem from="1578595732986" duration="7885000" />
+      <workItem from="1579021732286" duration="79000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61834000" />
+    <option name="totallyTimeSpent" value="62011000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
@@ -330,14 +266,14 @@
       <window_info anchor="bottom" id="TypeScript" order="0" weight="0.32937366" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.32937366" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.32937366" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32937366" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32829374" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32829374" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -536,42 +472,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mobile-signup/style.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mobile-signup/index.js">
+    <entry file="file://$PROJECT_DIR$/src/components/mobile-signup/style.css" />
+    <entry file="file://$PROJECT_DIR$/src/components/mobile-signup/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/mobile-questions/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+        <state relative-caret-position="-1581">
+          <caret line="131" column="5" lean-forward="true" selection-start-line="131" selection-start-column="5" selection-end-line="131" selection-end-column="5" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/mobile-questions/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
+        <state relative-caret-position="4446">
           <caret line="234" column="17" selection-start-line="234" selection-start-column="17" selection-end-line="234" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mobile-questions/index.js">
+    <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="135" column="20" selection-start-line="135" selection-start-column="20" selection-end-line="135" selection-end-column="20" />
+        <state relative-caret-position="424">
+          <caret line="33" column="24" lean-forward="true" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
           <folding>
-            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>

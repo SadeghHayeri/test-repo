@@ -24,9 +24,13 @@ function App() {
                 <Route path="/chat">
                     <Chat jwt={jwt}/>
                 </Route>
-                <Route path="/">
+                <Route path="/mobile">
                     {/*<MainPage/>*/}
                     <MobileQuestsion/>
+                </Route>
+                <Route path="/">
+                    <MainPage/>
+                    {/*<MobileQuestsion/>*/}
                 </Route>
             </Switch>
         </Router>
