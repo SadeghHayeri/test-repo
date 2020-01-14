@@ -26,7 +26,7 @@ function App() {
                 </Route>
                 <Route path="/">
                     {
-                        (window.innerHeight > 900) ? <MainPage/> : <MobileQuestsion/>
+                        (window.innerHeight > 500) ? <MainPage/> : <MobileQuestsion/>
                     }
                 </Route>
             </Switch>
