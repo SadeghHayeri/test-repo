@@ -24,13 +24,10 @@ function App() {
                 <Route path="/chat">
                     <Chat jwt={jwt}/>
                 </Route>
-                <Route path="/mobile">
-                    {/*<MainPage/>*/}
-                    <MobileQuestsion/>
-                </Route>
                 <Route path="/">
-                    <MainPage/>
-                    {/*<MobileQuestsion/>*/}
+                    {
+                        (window.innerHeight > 900) ? <MainPage/> : <MobileQuestsion/>
+                    }
                 </Route>
             </Switch>
         </Router>
