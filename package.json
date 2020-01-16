@@ -1,4 +1,5 @@
 {
+  "proxy": "http://localhost:5000",
   "name": "autisme",
   "version": "0.1.0",
   "private": true,
@@ -6,6 +7,8 @@
   "dependencies": {
     "@material-ui/core": "^4.8.3",
     "@material-ui/icons": "^4.5.1",
+    "axios": "^0.19.1",
+    "bluebird": "^3.7.2",
     "body-scroll-lock": "^2.6.4",
     "howler": "^2.1.2",
     "persian-date": "^1.1.0",

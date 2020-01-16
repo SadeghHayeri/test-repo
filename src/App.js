@@ -11,27 +11,44 @@ import {
     Link
 } from "react-router-dom";
 import MobileQuestsion from "./components/mobile-questions";
+import SignUp from "./components/signup";
+import SignIn from "./components/signin";
 
-function App() {
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            jwt: 'unknown',
+        }
+    }
 
-    const jwt = {
-        username: Math.random() > .5 ? 'admin' : 'sadegh'
-    };
+    async componentDidMount() {
+        const jwt = await sessionStorage.getItem('jwt');
+        this.setState({jwt: JSON.parse(jwt)});
+    }
 
-    return (
-        <Router>
-            <Switch>
-                <Route path="/chat">
-                    <Chat jwt={jwt}/>
-                </Route>
-                <Route path="/">
-                    {
-                        (window.innerWidth > 770) ? <MainPage/> : <MobileQuestsion/>
-                    }
-                </Route>
-            </Switch>
-        </Router>
-    );
+    render() {
+        return (
+            <Router>
+                <Switch>
+                    <Route path="/chat">
+                        <Chat jwt={this.state.jwt}/>
+                    </Route>
+                    <Route path="/signup">
+                        <SignUp jwt={this.state.jwt}/>
+                    </Route>
+                    <Route path="/login">
+                        <SignIn jwt={this.state.jwt}/>
+                    </Route>
+                    <Route path="/">
+                        {
+                            (window.innerWidth > 770) ? <MainPage/> : <MobileQuestsion/>
+                        }
+                    </Route>
+                </Switch>
+            </Router>
+        );
+    }
 }
 
 export default App;
