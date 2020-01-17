@@ -33,6 +33,14 @@ export default class QuestionGenerator {
         return this.questions.length;
     }
 
+    getQuestionRange(startIndex, endIndex) {
+        const result = [];
+        for (let i = startIndex; i <= endIndex; i++) {
+            result.push(this.getQuestion(i))
+        }
+        return result;
+    }
+
     getQuestion(index) {
         this.preFetchSounds(index + 1);
         const questionNumber = this.questions[index];
@@ -64,11 +72,19 @@ export default class QuestionGenerator {
         }, 100);
     }
 
+    unAnswerQuestion(id) {
+        delete this.answers[id];
+    }
+
     answerQuestion(id, answer) {
         this.answers[id] = answer;
     }
 
     getAnswer(id) {
         return this.answers[id];
+    }
+
+    getAnsweredQuestionsCount() {
+        return Object.keys(this.answers).length;
     }
 }

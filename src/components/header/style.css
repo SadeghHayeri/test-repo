@@ -11,7 +11,7 @@ header {
 
 .inner-header {
     display: flex;
-    width: 1000px;
+    width: 1200px;
     align-items: center;
     justify-content: space-between;
 }

@@ -22,11 +22,6 @@ class App extends React.Component {
         }
     }
 
-    async componentDidMount() {
-        const jwt = await sessionStorage.getItem('jwt');
-        this.setState({jwt: JSON.parse(jwt)});
-    }
-
     render() {
         return (
             <Router>

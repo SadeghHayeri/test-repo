@@ -2,10 +2,9 @@ import React from 'react'
 import './style.css'
 import * as Scroll from 'react-scroll';
 import Message from "./message";
-import Users from "./users";
 import io from 'socket.io-client';
-import Header from "../header";
 import Promise from 'bluebird';
+import ChatHeader from "./chat-header";
 
 let scroll = Scroll.animateScroll;
 
@@ -15,11 +14,12 @@ class Chat extends React.Component {
         this.typingTimeout = null;
         this.state = {
             input: '',
-            target: '',
-            isTyping: false,
+            target: null,
+            typing: false,
             messages: [],
             users: [],
             connected: false,
+            jwt: 'unknown',
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -49,7 +49,7 @@ class Chat extends React.Component {
     }
 
     async submitSocketConnection() {
-        if (this.props.jwt !== 'unknown' && !this.state.connected) {
+        if (this.state.jwt !== 'unknown' && !this.state.connected) {
             this.io = io.connect('http://localhost:5000');
 
             this.io.on('connect', () => {
@@ -57,17 +57,17 @@ class Chat extends React.Component {
             });
 
             this.io.on('disconnect', async () => {
-                this.setState({connected: false, target: this.props.jwt === 'admin' ? '' : 'admin'});
+                this.setState({connected: false, target: this.state.jwt === 'admin' ? '' : 'admin'});
             });
 
-            this.io.emit('hello', {jwt: this.props.jwt});
+            this.io.emit('hello', {jwt: this.state.jwt});
 
             this.io.on('message', (message) => {
                 this.receiveMessage(message);
             });
 
             this.io.on('typing', ({timeout, from}) => {
-                if (from === this.state.target) {
+                if (this.state.target && from === this.state.target.username) {
                     this.setTyping(timeout);
                 }
             });
@@ -93,8 +93,8 @@ class Chat extends React.Component {
                 this.setState({users});
             });
 
-            if (this.props.jwt.username !== 'admin') {
-                this.onUserChange({name: 'admin'});
+            if (this.state.jwt && this.state.jwt.username !== 'admin') {
+                this.onUserChange({username: 'admin', name: 'ادمین'});
             }
         } else {
             await Promise.delay(500);
@@ -103,6 +103,8 @@ class Chat extends React.Component {
     }
 
     async componentDidMount() {
+        const jwt = await sessionStorage.getItem('jwt');
+        this.setState({jwt: JSON.parse(jwt)});
         this.submitSocketConnection();
     }
 
@@ -113,7 +115,7 @@ class Chat extends React.Component {
     };
 
     async receiveMessage(message) {
-        if (message.from === this.state.target) {
+        if (this.state.target && message.from === this.state.target.username) {
             const messages = [...this.state.messages, message];
             this.setState({messages});
 
@@ -131,12 +133,12 @@ class Chat extends React.Component {
         if (!this.state.input || !this.state.target) return;
         const messages = [...this.state.messages, {
             id: Date.now(),
-            from: this.props.jwt.username,
+            from: this.state.jwt.username,
             text: this.state.input,
             time: Date.now(),
         }];
 
-        this.io.emit('message', {target: this.state.target, text: this.state.input});
+        this.io.emit('message', {target: this.state.target.username, text: this.state.input});
         this.setState({messages, input: ''});
         scroll.scrollToBottom({duration: 100});
     }
@@ -144,47 +146,43 @@ class Chat extends React.Component {
     handleChange(event) {
         this.setState({input: event.target.value});
         if (this.state.target)
-            this.io.emit('typing', {target: this.state.target});
+            this.io.emit('typing', {target: this.state.target.username});
     }
 
     onUserChange(user) {
-        this.setState({target: user.name});
-        this.io.emit('getAllMessages', {target: user.name})
+        this.setState({target: user});
+        this.io.emit('getAllMessages', {target: user.username})
     }
 
     render() {
         const messages = this.state.messages.map(message => (
-            <Message key={message.id} text={message.text} sender={message.from === this.props.jwt.username ? 1 : 0} time={message.time}/>
+            <Message key={message.id} text={message.text} sender={message.from === this.state.jwt.username ? 1 : 0} time={message.time}/>
         ));
 
-        const isLogin = this.props.jwt !== null;
+        const isLogin = this.state.jwt !== null;
         const isConnected = this.state.connected;
+
+        if (!isLogin) {
+            window.location.href = '/login'
+        }
 
         return(
             <div>
-                <Header/>
-                {
-                    (isLogin && isConnected) ?
-                    (<div className={"chat-box"}>
-                        <div className={"message-box"}>
-                            {messages}
-                            {this.state.typing && <div className={"typing"}>...is typing</div>}
+                <ChatHeader connected={isConnected} target={this.state.target} users={this.state.users} onUserChange={(user) => this.onUserChange(user)} />
+                <div className={"chat-box"}>
+                    <div className={"message-box"}>
+                        {messages}
+                        {this.state.typing && <div className={"typing"}>...is typing</div>}
+                    </div>
+                    <div className={"input"}>
+                        <div onClick={() => {
+                            this.sendMessage()
+                        }} className={"send-button"}>ارسال
                         </div>
-                        <Users users={this.state.users} onChange={(user) => {
-                            this.onUserChange(user)
-                        }}/>
-                        <div className={"input"}>
-                            <div onClick={() => {
-                                this.sendMessage()
-                            }} className={"send-button"}>ارسال
-                            </div>
-                            <input type={"text"} placeholder={'متن پیام را بنویسید...'} value={this.state.input}
-                                   onChange={this.handleChange}/>
-                        </div>
-                    </div>)
-                    :
-                    <div>{isLogin ? 'در حال اتصال به سرور' : 'لطفا وارد شوید'}</div>
-                }
+                        <input type={"text"} placeholder={'متن پیام را بنویسید...'} value={this.state.input}
+                               onChange={this.handleChange}/>
+                    </div>
+                </div>
             </div>
         );
     }

@@ -3,89 +3,39 @@ import Question from "./question";
 import Answer from './answer';
 import './style.css'
 import ProgressBar from "./progress-bar";
+import QuestionManger from "../../util/questionManager";
 
 
-const EVERY_PAGE_QUESTIONS = 6;
+const EVERY_PAGE_QUESTIONS = 5;
 
 class Questions extends React.Component {
     constructor(props) {
         super(props);
-        this.answers = {};
+        this.questionManager = new QuestionManger(0, 'male', false);
         this.state = {
             percentage: 0,
             page: 0,
-            questions: [
-                {
-                    id: 1,
-                    title: 'هدف از این طرح غربالگری اولیه‌ی کودکان مبتلا به اتیسم، پیش از تشخیص متخصص می‌باشد؟',
-                }, {
-                    id: 2,
-                    title: 'هدف از این طرح غربالگری اولیه‌ی کودکان مبتلا؟',
-                }, {
-                    id: 3,
-                    title: 'هدف از این طرح غربالگری اولیه‌ی کودکان مبتلا به اتیسم؟',
-                }, {
-                    id: 4,
-                    title: 'هدف از این طرح غربالگری اولیه‌ی کودکان مبتلا به اتیسم، پیش از؟',
-                }, {
-                    id: 5,
-                    title: 'هدف از این طرح غربالگری اولیه‌ی کودکان مبتلا به اتیسم، پیش از تشخیص متخصص می‌باشد؟',
-                }, {
-                    id: 6,
-                    title: 'هدف از این غربالگری اولیه‌ی کودکان مبتلا؟',
-                }, {
-                    id: 7,
-                    title: 'هدف از این طرح غربالگری اولیه‌ی کودکان مبتلا به؟',
-                }, {
-                    id: 8,
-                    title: 'هدف از این طرح غربالگری اولیه‌ی کودکان مبتلا به، پیش از؟',
-                }, {
-                    id: 9,
-                    title: 'هدف از این طرح اولیه‌ی کودکان مبتلا به اتیسم، پیش از تشخیص متخصص می‌باشد؟',
-                }, {
-                    id: 10,
-                    title: 'هدف از این طرح اولیه‌ی کودکان مبتلا؟',
-                }, {
-                    id: 11,
-                    title: 'هدف از این طرح غربالگری اولیه‌ی کودکان مبتلا به اتیسم؟',
-                }, {
-                    id: 12,
-                    title: 'هدف از این طرح غربالگری کودکان مبتلا به اتیسم، پیش از؟',
-                }, {
-                    id: 13,
-                    title: 'هدف از این طرح غربالگری اولیه‌ی کودکان به اتیسم، پیش از تشخیص متخصص می‌باشد؟',
-                }, {
-                    id: 14,
-                    title: 'هدف از این طرح اولیه‌ی کودکان مبتلا؟',
-                }, {
-                    id: 15,
-                    title: 'هدف از این طرح غربالگری اولیه‌ی کودکان مبتلا؟',
-                }, {
-                    id: 16,
-                    title: 'هدف از این طرح غربالگری اولیه‌ی به اتیسم، پیش از؟',
-                }
-            ],
-        }
+        };
     }
 
     updatePercentage() {
-        const totalCount = this.state.questions.length;
-        const answeredQuestions = Object.keys(this.answers).length;
-        this.setState({percentage: Math.floor(answeredQuestions / totalCount * 100)})
+        const answeredQuestions = this.questionManager.getAnsweredQuestionsCount();
+        const tatalQuestions = this.questionManager.getCount();
+        this.setState({percentage: Math.floor( answeredQuestions / tatalQuestions * 100)})
     }
 
     answerItem(id, answer) {
         if (answer === null) {
-            delete this.answers[id];
+            this.questionManager.unAnswerQuestion(id);
         } else {
-            this.answers[id] = answer;
+            this.questionManager.answerQuestion(id, answer);
         }
         this.updatePercentage();
     }
 
     nextPage() {
         this.setState({page: this.state.page + 1});
-        window.scroll({top: 670, left: 0, behavior: 'smooth' })
+        window.scroll({top: 820, left: 0, behavior: 'smooth' })
     }
 
     previousPage() {
@@ -97,19 +47,20 @@ class Questions extends React.Component {
     }
 
     render() {
+        console.log(this.questionManager.getCount() - 1);
         const startOfPage = this.state.page * EVERY_PAGE_QUESTIONS;
-        const endOfPage = Math.min(startOfPage + EVERY_PAGE_QUESTIONS, this.state.questions.length);
+        const endOfPage = Math.min(startOfPage + EVERY_PAGE_QUESTIONS - 1, this.questionManager.getCount() - 1);
         const isFirstPage = this.state.page === 0;
-        const isLastPage = this.state.page === Math.ceil(this.state.questions.length / EVERY_PAGE_QUESTIONS) - 1;
+        const isLastPage = this.state.page === Math.ceil(this.questionManager.getCount() / EVERY_PAGE_QUESTIONS) - 1;
 
-        const thisPageQuestions = this.state.questions.slice(startOfPage, endOfPage);
+        const thisPageQuestions = this.questionManager.getQuestionRange(startOfPage, endOfPage);
         const questions = thisPageQuestions.map((question, i) => (
             <div className='question-item' key={question.id}>
                 <Question
                     id={question.id}
-                    title={question.title}
+                    title={question.text}
                 />
-                <Answer onChange={(answer) => this.answerItem(question.id, answer)} defaultAnswer={this.answers[question.id]}/>
+                <Answer onChange={(answer) => this.answerItem(question.id, answer)} defaultAnswer={this.questionManager.getAnswer(question.id)}/>
             </div>
         ));
 

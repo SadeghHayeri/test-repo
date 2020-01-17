@@ -42,7 +42,13 @@ class SignIn extends React.Component {
         this.state = {
             username: '',
             password: '',
+            jwt: 'unknown',
         }
+    }
+
+    async componentDidMount() {
+        const jwt = await sessionStorage.getItem('jwt');
+        this.setState({jwt: JSON.parse(jwt)});
     }
 
     async onSubmit() {

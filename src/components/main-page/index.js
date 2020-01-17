@@ -3,6 +3,7 @@ import './style.css'
 import Slider from "../slider";
 import Questions from "../questions";
 import Header from "../header";
+import Footer from "../footer";
 
 class MainPage extends React.Component {
     render() {
@@ -11,6 +12,7 @@ class MainPage extends React.Component {
                 <Header/>
                 <Slider/>
                 <Questions/>
+                <Footer/>
             </div>
         );
     }

@@ -1,0 +1,42 @@
+.chat-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(81, 142, 247);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.4);
+}
+
+.header-title {
+    color: white;
+    font-family: Vazir-Bold;
+    font-size: 18px;
+    /*display: flex;*/
+}
+
+.chat-header-status {
+    font-family: Vazir-Bold;
+    font-size: 11px;
+    color: white;
+    width: 40px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    margin-top: 5px;
+}
+
+.group-icon {
+    float: right;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 100px;
+}
