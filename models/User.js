@@ -4,6 +4,7 @@ mongoose.connect('mongodb://localhost:27017/autism', {useNewUrlParser: true, use
 
 const User = mongoose.model('user', {
     username: { type: String, index: true, unique: true },
+    name: { type: String },
     email: { type: String, index: true, unique: true },
     password: { type: String },
 });

@@ -31,22 +31,24 @@ async function getAllUsers() {
         .map(user => ({
             isOnline: users[user.username] && users[user.username].connected,
             username: user.username,
-            name: user.username,
+            name: user.name || user.username,
         }));
 }
 
 function handelSocket(io) {
     io.on('connection', (socket) => {
-        socket.on('hello', ({jwt}) => {
-            socket.username = jwt.username;
-            users[jwt.username] = socket;
+        socket.on('hello', async ({jwt}) => {
+            try {
+                socket.username = jwt.username;
+                users[jwt.username] = socket;
 
-            if (jwt.username === 'admin') {
-                io.emit('statusChange', {username: 'admin', isOnline: true})
-            } else {
-                if (users['admin'])
-                    users['admin'].emit('statusChange', {username: jwt.username, isOnline: true})
-            }
+                if (jwt.username === 'admin') {
+                    io.emit('statusChange', {username: 'admin', isOnline: true})
+                } else {
+                    if (users['admin'])
+                        users['admin'].emit('statusChange', {username: jwt.username, isOnline: true})
+                }
+            } catch (e) {}
         });
 
         socket.on('message', ({target, text}) => {

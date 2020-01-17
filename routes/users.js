@@ -21,8 +21,8 @@ router.post('/login', async (req, res) => {
 router.post('/signup', async (req, res) => {
   console.log('signup', req.body);
   try {
-    const {username, email, password} = req.body;
-    const newUser = new User({username, email, password});
+    const {username, email, password, name} = req.body;
+    const newUser = new User({username, email, password, name});
     await newUser.save();
 
     res.json({res: 'OK'});
