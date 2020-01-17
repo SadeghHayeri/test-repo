@@ -41,6 +41,7 @@ class SignUp extends React.Component {
         super(props);
         this.state = {
             username: '',
+            name: '',
             email: '',
             password: '',
             jwt: 'unknown',
@@ -53,8 +54,8 @@ class SignUp extends React.Component {
     }
 
     async onSubmit() {
-        const {username, email, password} = this.state;
-        await axios.post('/users/signup', {username, email, password});
+        const {username, email, password, name} = this.state;
+        await axios.post('/users/signup', {username, email, password, name});
         window.location.href = '/login';
     }
 
@@ -72,6 +73,20 @@ class SignUp extends React.Component {
                     </Typography>
                     <form className={classes.form} noValidate>
                         <Grid container spacing={2}>
+                            <Grid item xs={12}>
+                                <TextField
+                                    // variant="outlined"
+                                    required
+                                    fullWidth
+                                    id="username"
+                                    label="نام و نام خانوادگی"
+                                    name="name"
+                                    autoComplete="name"
+                                    value={this.state.name}
+                                    onChange={e => this.setState({ name: e.target.value })}
+
+                                />
+                            </Grid>
                             <Grid item xs={12}>
                                 <TextField
                                     // variant="outlined"
