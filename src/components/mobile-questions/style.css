@@ -18,10 +18,7 @@
 .questions-menu-icon {
     width: 25px;
     opacity: .7;
-    /*margin-right: 5%;*/
-    /*margin-top: 8%;*/
 }
-
 
 .sound-button {
     width: 50px;
@@ -229,12 +226,20 @@
     flex-direction: column;
     justify-content: center;
     justify-items: center;
-    /*align-items: center;*/
-    /*height: 100%;*/
     padding: 0 20px;
     margin-top: 20px;
 }
 
 .withMargin {
     margin-top: 20px !important;
+}
+
+.form-button {
+    height: 60px;
+}
+
+.questions-menu-icon {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 100px;
 }

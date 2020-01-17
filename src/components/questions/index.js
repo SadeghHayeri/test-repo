@@ -4,9 +4,18 @@ import Answer from './answer';
 import './style.css'
 import ProgressBar from "./progress-bar";
 import QuestionManger from "../../util/questionManager";
+import Typography from "@material-ui/core/Typography";
+import TextField from "@material-ui/core/TextField";
+import Select from "@material-ui/core/Select";
+import MenuItem from "@material-ui/core/MenuItem";
+import RadioGroup from "@material-ui/core/RadioGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Radio from "@material-ui/core/Radio";
+import Button from "@material-ui/core/Button";
+import FormLabel from "@material-ui/core/FormLabel";
+import FormControl from '@material-ui/core/FormControl';
 
-
-const EVERY_PAGE_QUESTIONS = 5;
+const EVERY_PAGE_QUESTIONS = 6;
 
 class Questions extends React.Component {
     constructor(props) {
@@ -15,6 +24,7 @@ class Questions extends React.Component {
         this.state = {
             percentage: 0,
             page: 0,
+            started: false,
         };
     }
 
@@ -46,8 +56,12 @@ class Questions extends React.Component {
         alert('سرور کو؟')
     }
 
+    onStart() {
+        this.setState({started: true});
+        window.scroll({top: 820, left: 0, behavior: 'smooth' })
+    }
+
     render() {
-        console.log(this.questionManager.getCount() - 1);
         const startOfPage = this.state.page * EVERY_PAGE_QUESTIONS;
         const endOfPage = Math.min(startOfPage + EVERY_PAGE_QUESTIONS - 1, this.questionManager.getCount() - 1);
         const isFirstPage = this.state.page === 0;
@@ -64,7 +78,51 @@ class Questions extends React.Component {
             </div>
         ));
 
-        return(
+        const formView = (
+            <div className='form-view'>
+                <FormControl fullWidth className='mobile-form'>
+                    <TextField variant="outlined" className='withMargin' id="standard-basic" label="نام کودک" dir='rtl' onChange={event => {this.setState({name: event.target.value})}}/>
+
+                    <Select
+                        labelId="age-label"
+                        id="demo-simple-select"
+                        value={0}
+                        label="بازه‌ی سنی کودک"
+                        variant="outlined"
+                        className='withMargin'
+                        onChange={event => {this.setState({age: event.target.value})}}
+                    >
+                        <MenuItem value={0}>
+                            <em>بازه‌ی سنی کودک خود را وارد کنید</em>
+                        </MenuItem>
+                        <MenuItem value={1}>۱۸ماه تا ۲سال</MenuItem>
+                        <MenuItem value={2}>بین ۲ تا ۳ سال</MenuItem>
+                        <MenuItem value={3}>بین ۳ تا ۴ سال</MenuItem>
+                        <MenuItem value={4}>بین ۴ تا ۵ سال</MenuItem>
+                        <MenuItem value={5}>بالای ۵ سال</MenuItem>
+                    </Select>
+
+
+                    <FormLabel component="legend" className='withMargin' variant="subtitle1">جنسیت کودک خود را انتخاب کنید:</FormLabel>
+                    <RadioGroup row value={this.state.sex} onChange={event => {this.setState({sex: event.target.value})}}>
+                        <FormControlLabel value="female" control={<Radio />} label="دختر" />
+                        <FormControlLabel value="male" control={<Radio />} label="پسر" />
+                    </RadioGroup>
+
+                    <FormLabel component="legend" className='withMargin' variant="subtitle1">آیا سابقه بیماری اتیسم در خانواده وجود دارد؟</FormLabel>
+                    <RadioGroup row value={this.state.otherPersonHasAutism} onChange={event => {this.setState({otherPersonHasAutism: event.target.value})}}>
+                        <FormControlLabel value='false' control={<Radio />} label="خیر" />
+                        <FormControlLabel value='true' control={<Radio />} label="بله" />
+                    </RadioGroup>
+
+                    <TextField className='withMargin' variant="outlined" id="standard-basic" label="شماره موبایل" dir='rtl' onChange={event => {this.setState({phone: event.target.value})}} />
+
+                    <Button onClick={() => this.onStart()} className='withMargin form-button' variant="contained" color="primary">شروع تست</Button>
+                </FormControl>
+            </div>
+        );
+
+        const questionsView = (
             <div>
                 <ProgressBar percentage={this.state.percentage}/>
                 {questions}
@@ -73,6 +131,12 @@ class Questions extends React.Component {
                     {isLastPage && <div className="button end" onClick={() => this.end()}>پایان</div>}
                     {!isFirstPage && <div className="button previous" onClick={() => this.previousPage()}>قبلی</div>}
                 </div>
+            </div>
+        );
+
+        return(
+            <div>
+                {this.state.started ? questionsView: formView}
             </div>
         );
     }

@@ -79,4 +79,7 @@ footer {
     font-size: 12px;
     background-color: #333;
     font-family: Vazir-Thin;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
 }

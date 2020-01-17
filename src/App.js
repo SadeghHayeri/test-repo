@@ -13,6 +13,15 @@ import {
 import MobileQuestsion from "./components/mobile-questions";
 import SignUp from "./components/signup";
 import SignIn from "./components/signin";
+import rtl from 'jss-rtl';
+import { createMuiTheme, StylesProvider, ThemeProvider, jssPreset } from '@material-ui/core/styles';
+import { create } from "jss";
+import MobileMainPage from "./components/mobile-main-page";
+
+const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
+const theme = createMuiTheme({
+    direction: "rtl"
+});
 
 class App extends React.Component {
     constructor(props) {
@@ -24,24 +33,31 @@ class App extends React.Component {
 
     render() {
         return (
-            <Router>
-                <Switch>
-                    <Route path="/chat">
-                        <Chat jwt={this.state.jwt}/>
-                    </Route>
-                    <Route path="/signup">
-                        <SignUp jwt={this.state.jwt}/>
-                    </Route>
-                    <Route path="/login">
-                        <SignIn jwt={this.state.jwt}/>
-                    </Route>
-                    <Route path="/">
-                        {
-                            (window.innerWidth > 770) ? <MainPage/> : <MobileQuestsion/>
-                        }
-                    </Route>
-                </Switch>
-            </Router>
+            <StylesProvider jss={jss}>
+                <ThemeProvider theme={theme}>
+                    <Router>
+                        <Switch>
+                            <Route path="/chat">
+                                <Chat jwt={this.state.jwt}/>
+                            </Route>
+                            <Route path="/signup">
+                                <SignUp jwt={this.state.jwt}/>
+                            </Route>
+                            <Route path="/login">
+                                <SignIn jwt={this.state.jwt}/>
+                            </Route>
+                            <Route path="/test">
+                                <MobileQuestsion />
+                            </Route>
+                            <Route path="/">
+                                {
+                                    (window.innerWidth > 770) ? <MainPage/> : <MobileMainPage/>
+                                }
+                            </Route>
+                        </Switch>
+                    </Router>
+                </ThemeProvider>
+            </StylesProvider>
         );
     }
 }

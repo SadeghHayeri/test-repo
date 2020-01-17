@@ -57,7 +57,7 @@ class SignIn extends React.Component {
 
         const {jwt} = res.data;
         sessionStorage.setItem('jwt', JSON.stringify(jwt));
-        window.location.href = '/';
+        window.location.href = '/chat';
     }
 
     render() {

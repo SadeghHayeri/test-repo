@@ -8,6 +8,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import RadioButtonCheckedIcon from '@material-ui/icons/RadioButtonChecked';
 import PeopleIcon from '@material-ui/icons/People';
+import HomeIcon from '@material-ui/icons/Home';
 
 
 class ChatHeader extends React.Component {
@@ -59,10 +60,14 @@ class ChatHeader extends React.Component {
 
         return(
             <div className='chat-header'>
-                <Drawer anchor="right" open={this.state.drawer} onClose={() => this.toggleDrawer()}>
+                <Drawer anchor="left" open={this.state.drawer} onClose={() => this.toggleDrawer()}>
                     {sideList}
                 </Drawer>
-                <PeopleIcon onClick={() => this.setState({drawer: true})} className='group-icon' />
+                {
+                    this.state.jwt && this.state.jwt.username === 'admin'
+                    ? <PeopleIcon onClick={() => this.setState({drawer: true})} className='group-icon' />
+                    : <HomeIcon onClick={() => window.location.href = '/'} className='group-icon' />
+                }
                 <div className='header-title'>
                     {title}
                     {connected && target && <div className={'chat-header-status'} style={{backgroundColor: isOnline ? 'green' : 'red'}}>{isOnline ? 'آنلاین' : 'آفلاین'}</div>}

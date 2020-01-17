@@ -1,0 +1,42 @@
+.mobile-header {
+    background-color: white;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Vazir-Black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.slider-image {
+    width: 100%;
+    margin-top: 90px;
+}
+
+.mobile-text {
+    font-family: Vazir-Thin;
+    padding: 30px;
+    text-align: justify;
+    line-height: 23px;
+}
+
+.info-button {
+    width: 90%;
+    height: 50px;
+    margin-top: 100px;
+}
+
+.mobile-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.margin-top {
+    margin-top: 20px;
+}

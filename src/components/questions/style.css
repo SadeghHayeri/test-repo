@@ -35,3 +35,17 @@
 .end {
     background-color: rgb(17, 151, 118);
 }
+
+.form-view {
+    max-width: 1000px;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.mobile-form {
+    width: 100%;
+}
