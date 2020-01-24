@@ -132,7 +132,7 @@ class MobileQuestsion extends React.Component {
 
     onStart() {
         this.questionManager = new QuestionManger(
-            this.state.age,
+            this.state.age - 1,
             this.state.sex,
             this.state.otherPersonHasAutism,
             this.state.name,
@@ -153,13 +153,13 @@ class MobileQuestsion extends React.Component {
                     <Select
                         labelId="age-label"
                         id="demo-simple-select"
-                        value={null}
+                        value={0}
                         label="بازه‌ی سنی کودک"
                         variant="outlined"
                         className='withMargin'
                         onChange={event => {this.setState({age: event.target.value})}}
                     >
-                        <MenuItem value={null}>
+                        <MenuItem value={0}>
                             <em>بازه‌ی سنی کودک خود را وارد کنید</em>
                         </MenuItem>
                         <MenuItem value={1}>۱۸ماه تا ۲سال</MenuItem>

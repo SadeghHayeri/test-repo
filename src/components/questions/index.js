@@ -35,7 +35,7 @@ class Questions extends React.Component {
             percentage: 0,
             page: 0,
             started: false,
-            age: null,
+            age: 0,
             sex: null,
             otherPersonHasAutism: null,
             phone: null,
@@ -78,7 +78,7 @@ class Questions extends React.Component {
 
     onStart() {
         this.questionManager = new QuestionManger(
-            this.state.age,
+            this.state.age - 1,
             this.state.sex,
             this.state.otherPersonHasAutism,
             this.state.name,
@@ -113,20 +113,20 @@ class Questions extends React.Component {
                     <Select
                         labelId="age-label"
                         id="demo-simple-select"
-                        value={null}
+                        value={0}
                         label="بازه‌ی سنی کودک"
                         variant="outlined"
                         className='withMargin'
                         onChange={event => {this.setState({age: event.target.value})}}
                     >
-                        <MenuItem value={null}>
+                        <MenuItem value={0}>
                             <em>بازه‌ی سنی کودک خود را وارد کنید</em>
                         </MenuItem>
-                        <MenuItem value={0}>۱۸ماه تا ۲سال</MenuItem>
-                        <MenuItem value={1}>بین ۲ تا ۳ سال</MenuItem>
-                        <MenuItem value={2}>بین ۳ تا ۴ سال</MenuItem>
-                        <MenuItem value={3}>بین ۴ تا ۵ سال</MenuItem>
-                        <MenuItem value={4}>بالای ۵ سال</MenuItem>
+                        <MenuItem value={1}>۱۸ماه تا ۲سال</MenuItem>
+                        <MenuItem value={2}>بین ۲ تا ۳ سال</MenuItem>
+                        <MenuItem value={3}>بین ۳ تا ۴ سال</MenuItem>
+                        <MenuItem value={4}>بین ۴ تا ۵ سال</MenuItem>
+                        <MenuItem value={5}>بالای ۵ سال</MenuItem>
                     </Select>
 
 
