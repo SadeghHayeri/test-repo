@@ -4,7 +4,6 @@ import Answer from './answer';
 import './style.css'
 import ProgressBar from "./progress-bar";
 import QuestionManger from "../../util/questionManager";
-import Typography from "@material-ui/core/Typography";
 import TextField from "@material-ui/core/TextField";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -14,18 +13,36 @@ import Radio from "@material-ui/core/Radio";
 import Button from "@material-ui/core/Button";
 import FormLabel from "@material-ui/core/FormLabel";
 import FormControl from '@material-ui/core/FormControl';
+import loadingImages from './images/loading.gif'
 
 const EVERY_PAGE_QUESTIONS = 6;
+
+function ResultView(result) {
+    return (
+        <div>
+            <div className='result-title'>{!result ? 'در حال تحلیل پاسخ‌ سوالات، لطفا چند لحظه صبر کنید...' : result}</div>
+            {
+                !result && <img className='loading-image' src={loadingImages} />
+            }
+        </div>
+    )
+}
 
 class Questions extends React.Component {
     constructor(props) {
         super(props);
-        this.questionManager = new QuestionManger(0, 'male', false);
         this.state = {
             percentage: 0,
             page: 0,
             started: false,
+            age: null,
+            sex: null,
+            otherPersonHasAutism: null,
+            phone: null,
+            finished: false,
+            result: null,
         };
+        this.questionManager = new QuestionManger(0, 'male', false, '', '');
     }
 
     updatePercentage() {
@@ -52,11 +69,21 @@ class Questions extends React.Component {
         this.setState({page: this.state.page - 1});
     }
 
-    end() {
-        alert('سرور کو؟')
+    async end() {
+        this.setState({finished: true});
+        const result = await this.questionManager.finishAndSend();
+        console.log('inja!', result);
+        this.setState({result});
     }
 
     onStart() {
+        this.questionManager = new QuestionManger(
+            this.state.age,
+            this.state.sex,
+            this.state.otherPersonHasAutism,
+            this.state.name,
+            this.state.phone
+        );
         this.setState({started: true});
         window.scroll({top: 820, left: 0, behavior: 'smooth' })
     }
@@ -86,20 +113,20 @@ class Questions extends React.Component {
                     <Select
                         labelId="age-label"
                         id="demo-simple-select"
-                        value={0}
+                        value={null}
                         label="بازه‌ی سنی کودک"
                         variant="outlined"
                         className='withMargin'
                         onChange={event => {this.setState({age: event.target.value})}}
                     >
-                        <MenuItem value={0}>
+                        <MenuItem value={null}>
                             <em>بازه‌ی سنی کودک خود را وارد کنید</em>
                         </MenuItem>
-                        <MenuItem value={1}>۱۸ماه تا ۲سال</MenuItem>
-                        <MenuItem value={2}>بین ۲ تا ۳ سال</MenuItem>
-                        <MenuItem value={3}>بین ۳ تا ۴ سال</MenuItem>
-                        <MenuItem value={4}>بین ۴ تا ۵ سال</MenuItem>
-                        <MenuItem value={5}>بالای ۵ سال</MenuItem>
+                        <MenuItem value={0}>۱۸ماه تا ۲سال</MenuItem>
+                        <MenuItem value={1}>بین ۲ تا ۳ سال</MenuItem>
+                        <MenuItem value={2}>بین ۳ تا ۴ سال</MenuItem>
+                        <MenuItem value={3}>بین ۴ تا ۵ سال</MenuItem>
+                        <MenuItem value={4}>بالای ۵ سال</MenuItem>
                     </Select>
 
 
@@ -136,7 +163,7 @@ class Questions extends React.Component {
 
         return(
             <div>
-                {this.state.started ? questionsView: formView}
+                {this.state.finished ? ResultView(this.state.result) : (this.state.started ? questionsView: formView)}
             </div>
         );
     }

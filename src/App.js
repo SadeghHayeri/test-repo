@@ -4,6 +4,9 @@ import MainPage from "./components/main-page";
 import Chat from "./components/chat";
 import Header from "./components/header";
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -56,6 +59,7 @@ class App extends React.Component {
                             </Route>
                         </Switch>
                     </Router>
+                    <ToastContainer />
                 </ThemeProvider>
             </StylesProvider>
         );

@@ -243,3 +243,23 @@
     padding: 10px;
     border-radius: 100px;
 }
+
+.result-title-mobile {
+    font-family: Vazir-Bold;
+    font-size: 15px;
+    text-align: center;
+    padding: 20px;
+}
+
+.loading-image-mobile {
+    width: 250px;
+    display: block;
+}
+
+.result-box-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}

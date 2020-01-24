@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import {withStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import {server} from "../../config";
+import { toast } from 'react-toastify';
 
 const axios = require('axios').create({
     baseURL: server,
@@ -44,6 +45,7 @@ class SignUp extends React.Component {
             name: '',
             email: '',
             password: '',
+            phone: '',
             jwt: 'unknown',
         }
     }
@@ -54,9 +56,40 @@ class SignUp extends React.Component {
     }
 
     async onSubmit() {
-        const {username, email, password, name} = this.state;
-        await axios.post('/users/signup', {username, email, password, name});
-        window.location.href = '/login';
+        const {username, email, password, name, phone} = this.state;
+        try {
+            await axios.post('/users/signup', {username, email, password, name, phone});
+            toast('با موفقیت ثبت‌نام انجام شد.', {type: toast.TYPE.SUCCESS});
+            window.location.href = '/login';
+        } catch (e) {
+            if (e.response.data.msg) {
+                toast(e.response.data.msg, {type: toast.TYPE.ERROR});
+            }
+
+            if (e.response.data.errors) {
+                const [error] = e.response.data.errors;
+                switch (error.param) {
+                    case 'username':
+                        toast('نام کاربری باید فقط با حروف و اعداد باشد', {type: toast.TYPE.ERROR});
+                        break;
+                    case 'email':
+                        toast('فرمت ایمیل نا معتبر است', {type: toast.TYPE.ERROR});
+                        break;
+                    case 'password':
+                        toast('رمز ورود باید حداقل از ۵ حرف تشکیل شود', {type: toast.TYPE.ERROR});
+                        break;
+                    case 'name':
+                        toast('نام را وارد کنید', {type: toast.TYPE.ERROR});
+                        break;
+                    case 'phone':
+                        toast('فرمت شماره موبایل نادرست است', {type: toast.TYPE.ERROR});
+                        break;
+                    default:
+                        toast('خطای سیستمی رخ داده است', {type: toast.TYPE.ERROR});
+                        break;
+                }
+            }
+        }
     }
 
     render() {
@@ -84,6 +117,20 @@ class SignUp extends React.Component {
                                     autoComplete="name"
                                     value={this.state.name}
                                     onChange={e => this.setState({ name: e.target.value })}
+
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <TextField
+                                    // variant="outlined"
+                                    required
+                                    fullWidth
+                                    id="phone"
+                                    label="شماره موبایل"
+                                    name="phone"
+                                    autoComplete="phone"
+                                    value={this.state.phone}
+                                    onChange={e => this.setState({ phone: e.target.value })}
 
                                 />
                             </Grid>

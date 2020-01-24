@@ -1,8 +1,17 @@
+const {server} = require("../../config");
 const persianTexts = require('./text');
 const selectionByAge = require('./selections');
+const { toast } = require('react-toastify');
 
-export default class QuestionGenerator {
-    constructor(age, sex, hasAutism) {
+const axios = require('axios').create({
+    baseURL: server,
+    headers: { 'Content-Type': 'application/json' }
+});
+
+class QuestionGenerator {
+    constructor(age, sex, hasAutism, name, phone) {
+        this.name = name;
+        this.phone = phone;
         this.age = age;
         this.sex = sex;
         this.hasAutism = hasAutism;
@@ -24,6 +33,7 @@ export default class QuestionGenerator {
     getLanguage() {
         return this.language;
     }
+
 
     isMute() {
         return this.mute;
@@ -87,4 +97,27 @@ export default class QuestionGenerator {
     getAnsweredQuestionsCount() {
         return Object.keys(this.answers).length;
     }
+
+    async finishAndSend() {
+        for (let i = 0; i < this.getCount(); i++) {
+            this.answerQuestion(i, 1);
+        }
+
+        if (this.getCount() !== this.getAnsweredQuestionsCount()) {
+            return toast('لطفا به تمامی سوالات پاسخ دهید', {type: toast.TYPE.WARNING});
+        }
+
+        const result = await axios.post('/questions', {
+            name: this.name,
+            phone: this.phone,
+            age: this.age,
+            sex: this.sex,
+            hasAutism: this.hasAutism,
+            answers: Object.values(this.answers),
+        });
+
+        return result.data.result;
+    }
 }
+
+module.exports = QuestionGenerator;

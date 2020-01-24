@@ -10,6 +10,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import {server} from '../../config';
 import Link from "@material-ui/core/Link";
+import {toast} from "react-toastify";
 
 const axios = require('axios').create({
     baseURL: server,
@@ -53,11 +54,17 @@ class SignIn extends React.Component {
 
     async onSubmit() {
         const {username, password} = this.state;
-        const res = await axios.post('/users/login', {username, password});
 
-        const {jwt} = res.data;
-        sessionStorage.setItem('jwt', JSON.stringify(jwt));
-        window.location.href = '/chat';
+        try {
+            const res = await axios.post('/users/login', {username, password});
+            const {jwt} = res.data;
+            sessionStorage.setItem('jwt', JSON.stringify(jwt));
+            window.location.href = '/chat';
+        } catch (e) {
+            if (e.response.data.msg) {
+                toast(e.response.data.msg, {type: toast.TYPE.ERROR});
+            }
+        }
     }
 
     render() {

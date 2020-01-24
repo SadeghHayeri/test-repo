@@ -18,6 +18,7 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormLabel from '@material-ui/core/FormLabel';
 import HomeIcon from '@material-ui/icons/Home';
+import loadingImages from "../questions/images/loading.gif";
 
 class MobileQuestsion extends React.Component {
     targetRef = React.createRef();
@@ -25,7 +26,7 @@ class MobileQuestsion extends React.Component {
 
     constructor(props) {
         super(props);
-        this.questionManager = new QuestionManger(0, 'male', false);
+        this.questionManager = new QuestionManger(0, 'male', false, '', '');
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
         this.targetElement = document.querySelector('#main');
         this.audio = null;
@@ -37,8 +38,13 @@ class MobileQuestsion extends React.Component {
             drawer: false,
             currentQuestion: this.questionManager.getQuestion(0),
             showSignUp: true,
+            age: null,
+            name: null,
+            phone: null,
             sex: 'female',
             otherPersonHasAutism: 'false',
+            finished: false,
+            result: null,
         };
     }
 
@@ -102,10 +108,18 @@ class MobileQuestsion extends React.Component {
         }
     }
 
+    async finishAndSend() {
+        this.setState({finished: true});
+        const result = await this.questionManager.finishAndSend();
+        this.setState({result});
+    }
+
     nextQuestion() {
         if (this.state.currentQuestion.number < this.questionManager.getCount() - 1) {
             const nextQuestion = this.questionManager.getQuestion(this.state.currentQuestion.number + 1);
             this.setState({currentQuestion: nextQuestion}, () => this.play());
+        } else {
+            this.finishAndSend();
         }
     }
 
@@ -116,11 +130,14 @@ class MobileQuestsion extends React.Component {
         }
     }
 
-    toggleDrawer() {
-        this.setState({drawer: !this.state.drawer});
-    }
-
     onStart() {
+        this.questionManager = new QuestionManger(
+            this.state.age,
+            this.state.sex,
+            this.state.otherPersonHasAutism,
+            this.state.name,
+            this.state.phone
+        );
         this.setState({showSignUp: false});
         this.play();
     }
@@ -136,13 +153,13 @@ class MobileQuestsion extends React.Component {
                     <Select
                         labelId="age-label"
                         id="demo-simple-select"
-                        value={0}
+                        value={null}
                         label="بازه‌ی سنی کودک"
                         variant="outlined"
                         className='withMargin'
                         onChange={event => {this.setState({age: event.target.value})}}
                     >
-                        <MenuItem value={0}>
+                        <MenuItem value={null}>
                             <em>بازه‌ی سنی کودک خود را وارد کنید</em>
                         </MenuItem>
                         <MenuItem value={1}>۱۸ماه تا ۲سال</MenuItem>
@@ -171,6 +188,18 @@ class MobileQuestsion extends React.Component {
                 </form>
             </div>
         );
+
+        if (this.state.finished) {
+            return (
+                <div className='result-box-mobile'>
+                    <div className='result-title-mobile'>{!this.state.result ? 'در حال تحلیل پاسخ‌ سوالات، لطفا چند لحظه صبر کنید...' : this.state.result}</div>
+                    {
+                        !this.state.result && <img className='loading-image-mobile' src={loadingImages} />
+                    }
+                    {this.state.result && <Button onClick={() => window.location = '/'} variant="contained" color="primary">بازگشت به خانه‌ی اصلی</Button>}
+                </div>
+            )
+        }
 
         return(
             <div className={'mobile-questions'} ref={this.targetRef} id={'main'}>
@@ -207,18 +236,18 @@ class MobileQuestsion extends React.Component {
                 }
                 {!this.state.showSignUp &&
                     <div className='mob-answers'>
-                        <div onClick={() => this.onButton(+2)}
-                             className={'mob-button butt1 ' + (this.questionManager.getAnswer(currentQuestion.id) === +2 ? 'selected' : '')}>کاملا
+                        <div onClick={() => this.onButton(4)}
+                             className={'mob-button butt1 ' + (this.questionManager.getAnswer(currentQuestion.id) === 4 ? 'selected' : '')}>کاملا
                             موافق
                         </div>
-                        <div onClick={() => this.onButton(+1)}
-                             className={'mob-button butt2 ' + (this.questionManager.getAnswer(currentQuestion.id) === +1 ? 'selected' : '')}>موافق
+                        <div onClick={() => this.onButton(3)}
+                             className={'mob-button butt2 ' + (this.questionManager.getAnswer(currentQuestion.id) === 3 ? 'selected' : '')}>موافق
                         </div>
-                        <div onClick={() => this.onButton(-1)}
-                             className={'mob-button butt3 ' + (this.questionManager.getAnswer(currentQuestion.id) === -1 ? 'selected' : '')}>مخالف
+                        <div onClick={() => this.onButton(2)}
+                             className={'mob-button butt3 ' + (this.questionManager.getAnswer(currentQuestion.id) === 2 ? 'selected' : '')}>مخالف
                         </div>
-                        <div onClick={() => this.onButton(-2)}
-                             className={'mob-button butt4 ' + (this.questionManager.getAnswer(currentQuestion.id) === -2 ? 'selected' : '')}>کاملا
+                        <div onClick={() => this.onButton(1)}
+                             className={'mob-button butt4 ' + (this.questionManager.getAnswer(currentQuestion.id) === 1 ? 'selected' : '')}>کاملا
                             مخالف
                         </div>
                     </div>
