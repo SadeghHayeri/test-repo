@@ -37,24 +37,23 @@ class Header extends React.Component {
                     </Link>
 
 
-                    {
-                        !isLogin ?
-                            (
-                                <div className="login"
-                                    onClick={() => {window.location.href = '/login'}}
-                                >
-                                    ورود
-                                </div>
-                            )
-                            :
-                            (
-                                <div className="login"
-                                     onClick={() => {window.location.href = '/chat'}}
-                                >
-                                    گفت و گوی آنلاین
-                                </div>
-                            )
-                    }
+                    <div className='header-left-buttons'>
+                        <div className="login" onClick={() => {window.location.href = '/blog'}}>درباره اتیسم</div>
+                        { !isLogin && <div className="login"
+                                          onClick={() => {window.location.href = '/login'}}
+                        >
+                            ورود
+                        </div>}
+
+
+                        {
+                            isLogin && <div className="login" onClick={() => {window.location.href = '/chat'}}>گفت و گوی آنلاین</div>
+                        }
+
+                        {
+                            isLogin && <div className="login" onClick={() => this.onLogout()}>خروج</div>
+                        }
+                    </div>
                 </div>
             </header>
         );

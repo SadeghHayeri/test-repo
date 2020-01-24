@@ -20,6 +20,9 @@ import rtl from 'jss-rtl';
 import { createMuiTheme, StylesProvider, ThemeProvider, jssPreset } from '@material-ui/core/styles';
 import { create } from "jss";
 import MobileMainPage from "./components/mobile-main-page";
+import Blog from './components/blog';
+import MobileBlog from './components/mobile-blog';
+
 
 const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
 const theme = createMuiTheme({
@@ -51,6 +54,11 @@ class App extends React.Component {
                             </Route>
                             <Route path="/test">
                                 <MobileQuestsion />
+                            </Route>
+                            <Route path="/blog">
+                                {
+                                    (window.innerWidth > 770) ? <Blog/> : <MobileBlog/>
+                                }
                             </Route>
                             <Route path="/">
                                 {

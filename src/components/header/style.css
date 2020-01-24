@@ -37,10 +37,16 @@ header {
     padding: 10px 30px;
     border-radius: 5px;
     background-color: #eae9ee;
+    margin: 3px;
 }
 
 .login:hover {
     font-family: Vazir;
     cursor: pointer;
     background-color: #eee;
+}
+
+.header-left-buttons {
+    display: flex;
+    flex-direction: row;
 }
