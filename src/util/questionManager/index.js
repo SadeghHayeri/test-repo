@@ -99,10 +99,6 @@ class QuestionGenerator {
     }
 
     async finishAndSend() {
-        for (let i = 0; i < this.getCount(); i++) {
-            this.answerQuestion(i, 1);
-        }
-
         if (this.getCount() !== this.getAnsweredQuestionsCount()) {
             return toast('لطفا به تمامی سوالات پاسخ دهید', {type: toast.TYPE.WARNING});
         }
