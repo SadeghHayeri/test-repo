@@ -113,7 +113,7 @@ class Questions extends React.Component {
                     <Select
                         labelId="age-label"
                         id="demo-simple-select"
-                        value={0}
+                        value={this.state.age}
                         label="بازه‌ی سنی کودک"
                         variant="outlined"
                         className='withMargin'
