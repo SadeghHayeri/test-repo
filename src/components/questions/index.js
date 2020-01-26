@@ -72,8 +72,11 @@ class Questions extends React.Component {
     async end() {
         this.setState({finished: true});
         const result = await this.questionManager.finishAndSend();
-        console.log('inja!', result);
-        this.setState({result});
+        if (!result) {
+            this.setState({finished: false});
+        } else {
+            this.setState({result});
+        }
     }
 
     onStart() {

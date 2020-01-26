@@ -100,7 +100,8 @@ class QuestionGenerator {
 
     async finishAndSend() {
         if (this.getCount() !== this.getAnsweredQuestionsCount()) {
-            return toast('لطفا به تمامی سوالات پاسخ دهید', {type: toast.TYPE.WARNING});
+            toast('لطفا به تمامی سوالات پاسخ دهید', {type: toast.TYPE.WARNING});
+            return null;
         }
 
         const result = await axios.post('/questions', {

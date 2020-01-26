@@ -111,7 +111,11 @@ class MobileQuestsion extends React.Component {
     async finishAndSend() {
         this.setState({finished: true});
         const result = await this.questionManager.finishAndSend();
-        this.setState({result});
+        if (!result) {
+            this.setState({finished: false});
+        } else {
+            this.setState({result});
+        }
     }
 
     nextQuestion() {
