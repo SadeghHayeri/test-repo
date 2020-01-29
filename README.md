@@ -19,6 +19,15 @@ A number of node.js tools is necessary to initialize and test the project. You m
 
 #### MongoDB
 The project uses MongoDB as a database. If you are on Mac and using Homebrew package manager the installation is as simple as `brew install mongodb`.
+```
+sudo apt update
+sudo apt install -y mongodb
+sudo systemctl status mongodb
+sudo systemctl start mongodb
+sudo systemctl enable mongodb
+# sudo ufw allow from your_other_server_ip/32 to any port 27017  
+```
+
 
 ### Start the MongoDB server
 First we need to create the `db` directory where the database files will live in. In your terminal navigate to the `root` of your system by doing `cd ..` until you reach the top directory. You can create the directory by running `sudo mkdir -p /data/db`. Now open a different tab in your terminal and run `mongod` to start the Mongo server.
@@ -27,8 +36,6 @@ First we need to create the `db` directory where the database files will live in
 
 The project is preconfigured with a simple development web server. The simplest way to start this server is:
 
+    sudo apt-get install nodejs
+    npm install
     npm start
-
-### Project Structure
-
-*Under Construction*
