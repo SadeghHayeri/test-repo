@@ -23,7 +23,6 @@ import MobileMainPage from "./components/mobile-main-page";
 import Blog from './components/blog';
 import MobileBlog from './components/mobile-blog';
 
-
 const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
 const theme = createMuiTheme({
     direction: "rtl"
@@ -34,7 +33,7 @@ class App extends React.Component {
         super(props);
         this.state = {
             jwt: 'unknown',
-        }
+        };
     }
 
     render() {

